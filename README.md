@@ -44,7 +44,7 @@ guarded-users = ["uuid1", "uuid2", "uuid3"]
 ```
 Replace uuid1, uuid2, and uuid3 with the actual UUIDs of the players you wish to guard.
 
-### Events
+## Events
 
 NoobGuard leverages the following events:
 
@@ -53,10 +53,10 @@ NoobGuard leverages the following events:
 - FinalizeSpawnEvent: Prevents hostile mob spawning near guarded players.
 - LivingIncomingDamageEvent: Cancels incoming damage to guarded players from hostile entities.
 
-### Logging
+## Logging
 
 NoobGuard logs actions and events such as target prevention, entity removal, and spawn prevention for debugging and monitoring purposes under the DEBUG level.
 
-### License
+## License
 
 This project is licensed under the MIT License. See LICENSE for details.
