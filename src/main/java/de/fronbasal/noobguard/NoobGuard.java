@@ -43,7 +43,10 @@ public class NoobGuard {
         @SubscribeEvent
         public static void onTargetChange(LivingChangeTargetEvent event) {
             if (event.getNewAboutToBeSetTarget() == null) return;
+            // ignore entities that are not hostile
             if (!HOSTILE_ENTITIES.contains(event.getEntity().getType())) return;
+            // ignore entities with a name tag
+            if (event.getEntity().getCustomName() != null) return;
             if (event.getNewAboutToBeSetTarget().getType() != EntityType.PLAYER) return;
             if (!Config.guardedUsers.contains(event.getNewAboutToBeSetTarget().getUUID())) return;
             // check if the user is wandering alone or only with other guarded users
@@ -78,6 +81,7 @@ public class NoobGuard {
             if (event.getSource().getEntity() instanceof Player) return;
             if (!(event.getSource().getEntity() instanceof LivingEntity entity)) return;
             if (!HOSTILE_ENTITIES.contains(entity.getType())) return;
+            if (event.getSource().getEntity().getCustomName() != null) return;
             if (event.getEntity().getType() != EntityType.PLAYER) return;
             if (!Config.guardedUsers.contains(event.getEntity().getUUID())) return;
             // check if the user is wandering alone or only with other guarded users

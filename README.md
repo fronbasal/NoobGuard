@@ -10,6 +10,7 @@ NoobGuard is a **server-side only** Minecraft NeoForge mod (1.21.x) designed to 
     - Prevents hostile mobs from spawning near guarded players if configured.
     - Allows the option to drop loot from hostile mobs killed by the plugin, or simply removes them without loot.
 - **Configurable Alone Distance**: Set a configurable distance in blocks around a player, defining how far they need to be from other non-guarded players to trigger peace mode.
+- **Ignores named entities**: Named entities are not affected by the plugin.
 
 ## Installation
 
